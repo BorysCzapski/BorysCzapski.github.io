@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/thumbnail.png">
+    <title>1tc-strona klasowa</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap');
+</style>
+</head>
+<body>
+    <navbar>
+       <ul class="nav-list">
+        <li class="nav-item">
+            <a href ="#"><img src="thumbnail-transparent.png" style="width: 50px; height: 50px; border: 0px solid white;"></a>
+        </li>
+        <li class="nav-item">
+            <a href ="#">Samorząd</a>
+        </li>
+        <li class="nav-item">
+            <a href ="#">Aktualności</a>
+        </li>
+        <li class="nav-item">
+            <a href ="#">Społeczność</a>
+        </li>
+        <li class="button">
+            <button href ="#" style="background: #D2042D; border-radius: 3px; font-size: 1rem; font-weight: 600; padding: 0.25rem 0.5rem; cursor: pointer;">Szkoła</button>
+        </li>
+        <li class="rollbar">
+            <div class="dropdown">
+                <button class="button2"><img src="images/menu-icon.png" style="width: 40px; height: 40px; padding: 0.25rem 0.25rem;" ></button>
+                <div class="dropdown-content">
+                    <a href="#">Aktualności</a>
+                    <a href="#">Samorząd</a>
+                    <a href="#">Społeczność</a>
+                </div>
+            </div>
+        </li>
+
+       </ul>
+    </navbar>
+    
+</body>
+<script>
+    function getCenter(element) {
+    const {left, top, width, height} = element.getBoundingClientRect();
+    return {x: left + width / 2, y: top + height / 2}
+}
+
+const arrow = document.querySelector("#arrow");
+const arrowCenter = getCenter(arrow);
+addEventListener("mousemove", ({clientX, clientY}) => {
+    const angle = Math.atan2(clientY - arrowCenter.y, clientX - arrowCenter.x);
+    arrow.style.transform = `rotate(${angle}rad)`;
+});
+</script>
+</html>

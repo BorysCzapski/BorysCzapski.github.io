@@ -1,0 +1,137 @@
+@keyframes hi{
+    0%  {filter:blur(4px);}
+25%  {filter:blur(3px);}
+  50%  {filter:blur(1px);}
+  100% {filter:blur(0px);}
+}
+
+html{
+    scroll-behavior: smooth;
+    animation-name: hi;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+*{
+    font-family: 'Hind Siliguri', sans-serif;
+}
+*:after{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Hind Siliguri', sans-serif;
+    background-color: #EFE7DA;
+}
+.nav-list{
+    cursor: auto;
+    background: white;
+    box-shadow: 0px 0px 10px grey;
+    margin: 0;
+    padding: 1rem 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.nav-item{
+    list-style: none;
+    margin: 1.2rem;
+}
+.nav-item a:hover{
+    transition: all 0.5s;
+    color: #D2042D;
+}
+.nav-item a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+.nav-item:nth-child(1){
+    margin-right: auto;
+    margin-left: 2rem;
+}
+
+@keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.nav-item:nth-child(1):hover{
+    transition: all 0.5ms;
+    animation: rotating 2s linear infinite;
+
+}
+.nav-item:last-child:hover{
+    transition: all 0.5s;
+    color: white;
+}
+.button{
+    list-style: none;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 1rem;
+    margin: 1.2rem;
+    background: #D2042D;
+    border-radius: 5px;
+}
+@media(min-width: 600px){
+    .rollbar{
+        display: none;
+    }
+}
+@media (max-width: 600px){
+    .nav-item:nth-child(2){
+        display: none;
+    }
+    .nav-item:nth-child(3){
+        display: none;
+    }
+    .nav-item:nth-child(4){
+        display: none;
+    }
+    .button{
+        display: none;
+    }
+    .rollbar{
+        display: inline-block;
+    }
+}
+.dropdown-content {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-weight: 600;
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 0px 3px black ;
+    z-index: 1;
+    top: 135px;
+    right: 7px;
+    left: auto;
+    border-radius: 5px;
+  }
+  
+  .dropdown-content a {
+    color: #D2042D;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+
+  
+
+
+.button2{
+    background: transparent;
+    border: none;
+    list-style: none;
+    font-family: 'Hind Siliguri', sans-serif;
+    margin: 1rem;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
